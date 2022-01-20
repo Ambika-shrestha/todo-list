@@ -1,0 +1,119 @@
+<div class="container">
+    <div class="inputHeader">
+        <div>
+            <input class="inputHeight" type="text" size="50" name="todoinput" [(ngModel)]="todoinput"
+                placeholder="Add a new to do" />
+        </div>
+
+        <div id="btnAdd">
+            <button class="btnInputadd" (click)="addTodo()">
+                <fa-icon [icon]="faPlus" size="4x" bordered="none"
+                    [styles]="{'color': 'white', 'background': '#e74c3c'}">
+                </fa-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="tableHeader">
+            <div><b>#</b></div>
+            <div><b>Todo</b></div>
+            <div><b>Action</b></div>
+        </div>
+
+        <div class="tableContent" *ngFor="let todo of todolist ; let i = index" [attr.data-index]="i ">
+            <div>{{i + 1}}</div>
+            <div *ngIf="todo.editMode; then isEdit; else notEdit"></div>
+
+            <ng-template #isEdit>
+                <input class="inputedit" type="text" name="edittodoinput" [(ngModel)]="todo.description"
+                    (keyup)="onKey($event)" (keydown.enter)="update(i, todo)" />
+            </ng-template>
+            <ng-template #notEdit>
+                <p class="des">{{todo.description}}</p>
+            </ng-template>
+
+            <div>
+                <button class="actionBtn" (click)="editTodo(i, todo)">
+                    <fa-icon [icon]="faPen" [styles]="{'color': '#3498db','background': 'white', 'border':'none'}">
+                    </fa-icon>
+                </button>
+                <button class="actionBtn" (click)="deleteTodo(i)">
+                    <fa-icon [icon]="faTrash" [styles]="{'color': '#3498db','background': 'white'}">
+                    </fa-icon>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class="header">
+
+        <input class="inputHeight" type="text" size="50" name="todoinput" [(ngModel)]="todoinput"
+            placeholder="Add a new to do" />
+
+        <div id="btnAdd">
+            <button class="btnInputadd" (click)="addTodo()">
+                <fa-icon [icon]="faPlus" size="4x" bordered="none"
+                    [styles]="{'color': 'white', 'background': '#e74c3c'}">
+                </fa-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="todolist">
+        <div class="title">
+                <span>#</span>
+                <span>To Dos</span>
+                <span>Action</span>
+        </div>
+
+        <div class="actionBox">
+           <div>1</div>
+           <div>clean</div>
+           <div>edit delete</div>
+        </div>
+
+        <table rules="rows">
+            <thead>
+                <th>#</th>
+                <th>Todos</th>
+                <th>Action</th>
+            </thead>
+
+            <tr *ngFor="let todo of todolist ; let i = index" [attr.data-index]="i ">
+                <td>{{i + 1}}</td>
+                <td *ngIf="todo.editMode; then isEdit; else notEdit"></td>
+                <ng-template #isEdit>
+                    <input class="inputedit" type="text" name="edittodoinput" [(ngModel)]="todo.description"
+                        (keyup)="onKey($event)" (keydown.enter)="update(i, todo)" />
+                </ng-template>
+
+                <div>
+                    <ng-template #notEdit>
+                        <p class="des">{{todo.description}}</p>
+                    </ng-template>
+                </div>
+
+                <td>
+                    <button class="actionBtn" (click)="editTodo(i, todo)">
+                        <fa-icon [icon]="faPen" [styles]="{'color': '#3498db','background': 'white', 'border':'none'}">
+                        </fa-icon>
+                    </button>
+                    <button class="actionBtn" (click)="deleteTodo(i)">
+                        <fa-icon [icon]="faTrash" [styles]="{'color': '#3498db','background': 'white'}">
+                        </fa-icon>
+                    </button>
+                </td>
+            </tr>
+        </table> 
+    </div>
+</div> -->
