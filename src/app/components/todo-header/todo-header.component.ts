@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Todo } from '../../models/Todo';
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { faPen } from '@fortawesome/free-solid-svg-icons'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { Component} from '@angular/core';
+import { TodoService } from 'src/app/service/todoService';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-todo-header',
@@ -10,70 +8,14 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./todo-header.component.css']
 })
 
+export class TodoHeaderComponent {
 
+  faPlus = faPlus;
 
-export class TodoHeaderComponent implements OnInit {
-
-  todolist: Todo[] = [];
-  todo: Todo = new Todo;
-  todoinput: string = "";
-  completed: boolean = false;
-  edit: boolean = false;
-  edittodoinput: string = "";
-  gettodoList: any;
-  newItem: string = "";
-  faPlus = faPlus
-  faPen = faPen
-  faTrash = faTrash
-
-
-  constructor() {
-   
-  }
-  ngOnInit(): void {
-    this.getList()
+  constructor(private _todoService: TodoService) {
   }
 
-  onKey(event: any) {
-    const inputValue = event.target.value;
-    console.log("value", inputValue)
+  onAddButtonClick(value: string): void {
+    this._todoService.addTodo(value);
   }
-
-  addTodo() {
-    this.todolist.push({
-      description: this.todoinput,
-      completed: this.completed,
-      editMode: this.edit,
-    });
-    localStorage.setItem("localData", JSON.stringify(this.todolist));
-    this.todoinput = '';
-  }
-
-  deleteTodo(id: any) {
-    this.todolist = this.todolist.filter((v, i) => i !== id);
-    localStorage.setItem("localData", JSON.stringify(this.todolist));
-  }
-
-  editTodo(index: any, todo: any) {
-    todo.editMode = true
-  }
-
-  update(index: any, todo: any) {
-    let localData = JSON.parse(localStorage['localData']);
-    for (let i = 0; i < localData.length; i++) {
-      if (todo.description === localData[i].description) {
-        localData[i].description = todo.description;
-        console.log("hello", localData[i].description)
-        break;
-      }
-    }
-    todo.editMode = false
-    const l = localStorage.setItem("localData", JSON.stringify(this.todolist));
-
-  }
-
-  getList() {
-    this.todolist = JSON.parse(localStorage.getItem('localData') || '{}');
-  }
-
 }

@@ -1,0 +1,41 @@
+
+.container-todo-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: lightblue;
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+}
+
+  .actionBtn{
+    display:  flex;
+    border: none;
+    outline: none;
+    padding: auto;
+    margin: 5px;
+    justify-content: flex-end;
+  }
+
+  .editInput{
+    display:  flex;
+    width: 80px;
+    height: 20px;
+  }
+  
+  .btn-edit-delete{
+    display:  flex;
+    flex: 4;
+    justify-content: flex-end;
+    width: 50px;
+    height: 20px;
+  }
+
+input[type=checkbox]:checked + label{
+  text-decoration: line-through;
+  color: rgb(187, 185, 185);
+}

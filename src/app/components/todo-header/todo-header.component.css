@@ -1,200 +1,44 @@
 .container{
   display: flex;
-  height:100vh;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  margin-top: 80px;
 }
 
-.inputHeader{
+h1{
   display: flex;
-  flex-direction: row;
-  width: 50vw;
-  height: 10vh;
   justify-content: center;
-  align-items: center;
+  font-size: 12em;   
+  font-weight: 100;
+  color: rgba(175, 47, 47, 0.15);
+  font-family: sans-serif;
 }
-
-.content{
-  width: 50vw;
-  height: 20vh;
-  gap: 30px;
-  padding:10px 10px;
-  margin-left: 330px;
-} 
 
 .inputHeight{
-  width: 20vw;
+  width: 35vw;
   padding:15px 10px;
-  margin-left: 20px;
-  line-height:145%;
+  line-height:146%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  border-color: #cccccc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white
 }
 
 .btnInputadd{
+  display: flex;
   border-radius: 0px,15px,105px,0px;
   border: none;
   outline: none;
+  font-size: 49px;
+  padding: 2px;
+  background-color: aliceblue;
 }
 
-.tableHeader{
-  display:  flex;
-  flex-direction: row;
-  gap: 85px;
-  background-color: tan;
-  border: 1px solid;
-  border-color: #cccccc;
-  height: 8vh;
-  width: 30vw;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 14pt;
-  font-family: Helvetica;
-}
-
-.tableContent{
-  display:  flex;
-  flex-direction: row;
-  gap: 80px 55px;
-  border: 1px solid;
-  height: 9vh;
-  width: 30vw;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  border-color: #cccccc;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  font-size: 13pt;
-  font-family: Helvetica;
-}
-
-.actionBtn{
+fa-icon{
+  color: white; 
+  background: #79a2c6;
   border: none;
-  outline: none;
-  padding: auto;
-  margin: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .container{
-  justify-content: center;
-  display: flex; 
-  margin-top: 150px;
-}
-
- table{
-  box-shadow:
-  0px -0.8px 1.2px rgba(0, 0, 0, 0.012),
-  0px -1.1px 2.7px rgba(0, 0, 0, 0.024),
-  0px -0.9px 4.6px rgba(0, 0, 0, 0.031),
-  0px 0.1px 6.9px rgba(0, 0, 0, 0.036),
-  0px 2.3px 10px rgba(0, 0, 0, 0.04),
-  0px 6.3px 14.2px rgba(0, 0, 0, 0.042),
-  0px 13.1px 20.1px rgba(0, 0, 0, 0.045),
-  0px 24.6px 29.2px rgba(0, 0, 0, 0.047),
-  0px 45.9px 45px rgba(0, 0, 0, 0.049),
-  0px 97px 80px rgba(0, 0, 0, 0.05);
-  width: 25vw;
-  margin: 100px auto;
-  margin-top: 15px;
-  border-radius: 5px;
-  font-family: Helvetica;
-  border-color:#cccccc; 
-   border-style:solid; 
-  border-width:1px;
-}
-
-table th{
-  color: rgb(182, 180, 180);
-  font-size: 13pt;
-  font-family: Helvetica;
-  height: 40px;
-  padding: 10px;
-}
-
-table tr td{
-  font-size: 12pt;
-  font-family: Helvetica;
-  height: 55px;
-  padding: 10px;
-  text-align: center;
-}
-
-.inputedit{
-  display:inline-block;
-  margin-top: 20px;
-}
-
-.des{
-  padding: 12px;
-  margin-top: 13px;
-  text-align: center;
-}
-
-.btnInputadd{
-  border-radius: 0px,15px,105px,0px;
-  border: none;
-  outline: none;
-}
-
-.actionBtn{
-  border: none;
-  outline: none;
-  padding: auto;
-  margin: 5px;
-}
-
-button:hover {
-  background-color:#DDDDDD;
-}
-
-.btnInputadd:active {
-  color: green;
-} */ 
-/* 
-.inputHeight{
-  display:inline-block;
-  padding:15px 10px;
-  line-height:145%;
-}
-
-.title{
-  background-color: red;
-  display: flex;
-        flex-wrap: wrap;
-}
-
-.actionBox{
-  background-color: silver;
-  display: flex;
-        flex-wrap: wrap;
-} */

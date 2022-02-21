@@ -1,0 +1,12 @@
+<div class="footer">
+    <button class="filterbtn" (click)="filterTodo(true)">
+        <fa-icon class="btnicon" [icon]="faCheckCircle" bordered="none" [styles]="{'color': 'green', 'background': 'white'}">
+        </fa-icon>  
+    </button>
+    <button class="filterbtn" (click)="filterTodo(false)">
+        <fa-icon class="btnicon" [icon]="faTimesCircle" bordered="none" [styles]="{'color': 'red', 'background': 'white'}">
+        </fa-icon>   
+    </button>
+    <button class="btnicon" class="filterbtn" (click)="allTodoList()"><span>All</span>
+    </button>
+</div>

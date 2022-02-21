@@ -1,0 +1,21 @@
+<input type="hidden" value="{{i + 1}}" />
+<input type="checkbox" [checked]="todo.checked" (click)="todochecked(todo, i)" />&nbsp;&nbsp; 
+<div *ngIf="todo.editMode; then isEdit; else notEdit"></div>
+<ng-template #isEdit>
+    <input class="inputedit" type="text" [(ngModel)]="todo.description" (keydown.enter)="update(i, todo)" />
+</ng-template>
+<div class="editInput">
+    <ng-template #notEdit>
+        <label>{{todo.description}}</label>
+    </ng-template>
+</div>
+<div class="btn-edit-delete">
+    <button class="actionBtn" (click)="editTodo(todo)">
+        <fa-icon [icon]="faPen" [styles]="{'color': '#3498db','background': 'white', 'border':'none'}">
+        </fa-icon>
+    </button>
+    <button class="actionBtn" (click)="deleteTodo(i)">
+        <fa-icon [icon]="faTrash" [styles]="{'color': '#D10000','background': 'white'}">
+        </fa-icon>
+    </button>
+</div>
