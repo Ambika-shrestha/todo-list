@@ -20,13 +20,17 @@
     margin-left: 25px;
 }
 
-.btnicon{
-    display: flex;
-    border-color: blue;
-    justify-content: center;
-    align-items: center;
-}
 span{
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.faCheckCircle{
+    color: green; 
+    background: white;
+}
+
+.faTimesCircle{
+    color: red; 
+    background: white;
 }

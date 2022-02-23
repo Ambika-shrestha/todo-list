@@ -6,7 +6,7 @@
   flex-direction: column;
 }
   
-app-todo-box{
+app-todo{
   display:flex;
   width: 35vw;
   line-height:145%;
@@ -22,6 +22,6 @@ app-todo-box{
   font-size: 18px;
   }
 
-app-todo-box .btn-e-d{
+app-todo .btn-e-d{
   flex: 1 1 auto;
 } 

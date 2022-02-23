@@ -1,0 +1,18 @@
+<input type="checkbox" [checked]="todo.checked" (click)="onTodochecked(todo, i)" />&nbsp;&nbsp;
+<div *ngIf="todo.editMode; then isEdit; else notEdit"></div>
+<ng-template #isEdit>
+    <input class="inputedit" type="text" [(ngModel)]="todo.description" (keydown.enter)="onUpdateTodoEnter(i, todo)" />
+</ng-template>
+<div class="editInput">
+    <ng-template #notEdit>
+        <label>{{todo.description}}</label>
+    </ng-template>
+</div>
+<div class="btn-edit-delete">
+    <button class="actionBtn" (click)="onEditTodoClick(todo)">
+        <fa-icon class="fapen" [icon]="faPen"></fa-icon>
+    </button>
+    <button class="actionBtn" (click)="onDeleteTodoClick(i)">
+        <fa-icon [icon]="faTrash" class="faTrash"></fa-icon>
+    </button>
+</div>

@@ -39,3 +39,14 @@ input[type=checkbox]:checked + label{
   text-decoration: line-through;
   color: rgb(187, 185, 185);
 }
+
+.fapen{
+  color: #3498db;
+  background: white;
+  border:none;
+}
+
+.faTrash{
+  color: #D10000;
+  background: white;
+}

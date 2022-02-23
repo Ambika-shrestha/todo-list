@@ -1,21 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { faCheckCircle, faTimesCircle} from '@fortawesome/free-solid-svg-icons'
 import { TodoService } from 'src/app/service/todoService';
 
 
 @Component({
   selector: 'app-todo-footer',
-  templateUrl: './todo-footer.html',
-  styleUrls: ['./todo-footer.css']
+  templateUrl: './todo-footer.component.html',
+  styleUrls: ['./todo-footer.component.css']
 })
 
-export class TodoFooterComponent implements OnInit {
+export class TodoFooter{
   
   faCheckCircle = faCheckCircle
   faTimesCircle = faTimesCircle
 
   constructor(private _todoService: TodoService) {}
-  ngOnInit(): void { }
 
   filterTodo(checked :boolean):void{
     this._todoService.filterToDoList(checked)
