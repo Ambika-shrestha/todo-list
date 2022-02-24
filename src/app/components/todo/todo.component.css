@@ -46,7 +46,21 @@ input[type=checkbox]:checked + label{
   border:none;
 }
 
+.fapen:hover{
+  color: #7cb9e2;
+  cursor: pointer;
+}
+
 .faTrash{
   color: #D10000;
   background: white;
+}
+
+.faTrash:hover{
+  color: #c97272;
+  cursor: pointer;
+}
+
+.check{
+  margin:5px;
 }

@@ -25,12 +25,27 @@ span{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+span:hover{
+    color: gray;
+    cursor: pointer;
+}
+
 .faCheckCircle{
     color: green; 
     background: white;
 }
 
+.faCheckCircle:hover{
+    color: rgb(116, 156, 116); 
+    cursor: pointer;
+}
+
 .faTimesCircle{
     color: red; 
     background: white;
+}
+
+.faTimesCircle:hover{
+    color: rgb(170, 101, 101); 
+    cursor: pointer;
 }

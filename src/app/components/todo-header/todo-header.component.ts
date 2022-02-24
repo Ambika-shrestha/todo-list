@@ -8,8 +8,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./todo-header.component.css']
 })
 
-export class TodoHeaderComponent {
-
+export class TodoHeader {
   faPlus = faPlus;
 
   constructor(private _todoService: TodoService) {
