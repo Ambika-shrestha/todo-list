@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { faCheckCircle, faTimesCircle} from '@fortawesome/free-solid-svg-icons'
-import { TodoService } from 'src/app/service/todoService';
+import { TodoService } from 'src/app/service/todo.service';
 
 
 @Component({
@@ -13,15 +13,16 @@ export class TodoFooter{
   
   faCheckCircle = faCheckCircle
   faTimesCircle = faTimesCircle
+  
 
   constructor(private _todoService: TodoService) {}
 
-  filterTodo(checked :boolean):void{
+  filterTodo(checked :boolean|null):void{
     this._todoService.filterToDoList(checked)
   }
 
-  allTodoList():void{
-   const fullList = this._todoService.getList()
-   this._todoService.todoListChange.emit(fullList)
-  }
+  // allTodoList():void{
+  //  const fullList = this._todoService.getList()
+  //  this._todoService.todoListChange.emit(fullList)
+  // }
 }

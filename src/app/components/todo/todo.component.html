@@ -3,16 +3,22 @@
 <ng-template #isEdit>
     <input class="inputedit" type="text" [(ngModel)]="todo.description" (keydown.enter)="onUpdateTodoEnter(i, todo)" />
 </ng-template>
-<div class="editInput">
-    <ng-template #notEdit>
-        <label>{{todo.description}}</label>
-    </ng-template>
-</div>
+<ng-template #notEdit>
+    <label>{{todo.description}}</label>
+</ng-template>
 <div class="btn-edit-delete">
-    <button class="actionBtn" (click)="onEditTodoClick(todo)">
-        <fa-icon class="fapen" [icon]="faPen"></fa-icon>
-    </button>
+    <div *ngIf="todo.checked; then isdisable else notdisabled"></div>
+    <ng-template #isdisable>
+        <button class="actionBtn" disabled>
+            <fa-icon [icon]="faPen"></fa-icon>
+        </button>
+    </ng-template>
+    <ng-template #notdisabled>
+        <button class="actionBtn" (click)="onEditTodoClick(todo)">
+            <fa-icon class="fapen" [icon]="faPen"></fa-icon>
+        </button>
+    </ng-template>
     <button class="actionBtn" (click)="onDeleteTodoClick(i)">
-        <fa-icon  class="faTrash" [icon]="faTrash"></fa-icon>
+        <fa-icon class="faTrash" [icon]="faTrash"></fa-icon>
     </button>
 </div>

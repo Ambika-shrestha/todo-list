@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons'
-import { Todo as TodoModel } from 'src/app/models/Todo';
-import { TodoService } from 'src/app/service/todoService';
+import { Todo as TodoModel } from 'src/app/models/Todo.model';
+import { TodoService } from 'src/app/service/todo.service';
 
 
 @Component({
@@ -29,7 +29,7 @@ export class Todo{
   }
 
   onEditTodoClick(todo: TodoModel):void{
-    this._todoService.editTodos(todo);
+    this._todoService.editTodo(todo);
   }
 
   onDeleteTodoClick(index:number):void{

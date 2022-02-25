@@ -8,7 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations' 
 import { TodoList } from './components/todo-list/todo-list.component';
 import { Todo } from './components/todo/todo.component';
-import { TodoService } from './service/todoService';
+import { TodoService } from './service/todo.service';
 import { TodoFooter } from './components/todo-footer/todo-footer.component';
 
 

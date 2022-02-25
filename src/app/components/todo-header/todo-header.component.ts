@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { TodoService } from 'src/app/service/todoService';
+import { TodoService } from 'src/app/service/todo.service';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -9,6 +9,8 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 })
 
 export class TodoHeader {
+
+  public newTodo: string = "";
   faPlus = faPlus;
 
   constructor(private _todoService: TodoService) {
@@ -16,5 +18,6 @@ export class TodoHeader {
 
   onAddButtonClick(value: string): void {
     this._todoService.addTodo(value);
+    this.newTodo = ""
   }
 }

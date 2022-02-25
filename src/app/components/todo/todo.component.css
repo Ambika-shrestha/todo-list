@@ -1,38 +1,29 @@
-
-.container-todo-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  background-color: lightblue;
-}
-
-.box{
-  display: flex;
-  flex-direction: row;
-}
-
-  .actionBtn{
-    display:  flex;
-    border: none;
-    outline: none;
-    padding: auto;
-    margin: 5px;
-    justify-content: flex-end;
+.check{
+  margin:5px;
   }
-
-  .editInput{
-    display:  flex;
-    width: 80px;
-    height: 20px;
+.inputedit{
+  height: 25px;
+  width:30vw;
   }
   
-  .btn-edit-delete{
-    display:  flex;
-    flex: 4;
-    justify-content: flex-end;
-    width: 50px;
-    height: 20px;
+.inputedit:focus {
+  outline: none !important;
+  border:1px solid rgb(73, 196, 226);
+  }
+
+.actionBtn{
+  display:  flex;
+  border: none;
+  outline: none;
+  padding: auto;
+  margin: 5px;
+  justify-content: flex-end;
+  }
+  
+.btn-edit-delete{
+  display:  flex;
+  flex: 4;
+  justify-content: flex-end;
   }
 
 input[type=checkbox]:checked + label{
@@ -47,13 +38,13 @@ input[type=checkbox]:checked + label{
 }
 
 .fapen:hover{
-  color: #7cb9e2;
-  cursor: pointer;
+ color: #7cb9e2;
+ cursor: pointer;
 }
 
 .faTrash{
-  color: #D10000;
-  background: white;
+ color: #D10000;
+ background: white;
 }
 
 .faTrash:hover{
@@ -61,6 +52,3 @@ input[type=checkbox]:checked + label{
   cursor: pointer;
 }
 
-.check{
-  margin:5px;
-}

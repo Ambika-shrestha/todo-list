@@ -1,7 +1,7 @@
 <h1>Todos</h1>
 <div class="container">
-    <input class="inputHeight" #newTodo placeholder="What do you want to do today?" />
-    <button class="btnInputadd" (click)="onAddButtonClick(newTodo.value)">
+    <input class="inputHeight" [(ngModel)]="newTodo" #ctrl="ngModel" placeholder="What do you want to do today?" />
+    <button class="btnInputadd" (click)="onAddButtonClick(ctrl.value)">
         <fa-icon [icon]="faPlus"></fa-icon>
       </button>
 </div>
