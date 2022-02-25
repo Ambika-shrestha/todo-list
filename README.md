@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 # TodoList Image
-![Capture](https://user-images.githubusercontent.com/34891364/155748795-85de7a64-bffd-4531-b360-c8ff3a72bac3.PNG)
+![Capture](https://user-images.githubusercontent.com/34891364/155749201-573a1655-3ee0-4b0d-a892-f8f551c567a3.PNG)
 
 ## Development server
 
